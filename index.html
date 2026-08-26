@@ -1,67 +1,2355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepmoy Hazra - Data Scientist & ML Engineer</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Deepmoy Hazra | Agentic AI & ML Engineer
+    </title>
+
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            padding: 0;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+        :root {
+
+            --blue: #1a73e8;
+            --blue-dark: #185abc;
+            --blue-light: #e8f0fe;
+
+            --green: #188038;
+            --green-light: #e6f4ea;
+
+            --yellow: #e37400;
+            --yellow-light: #fef7e0;
+
+            --red: #c5221f;
+            --red-light: #fce8e6;
+
+            --text: #202124;
+            --secondary: #5f6368;
+            --muted: #80868b;
+
+            --border: #dadce0;
+            --soft-border: #e8eaed;
+
+            --surface: #ffffff;
+            --background: #f8fafd;
         }
-        h1 {
-            color: #333;
+
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
         }
+
+
+        body {
+
+            font-family:
+                "Google Sans",
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background:
+                var(--background);
+
+            color:
+                var(--text);
+
+            overflow:
+                hidden;
+
+            -webkit-font-smoothing:
+                antialiased;
+        }
+
+
         a {
-            color: #0077b5; /* LinkedIn blue */
+            color: inherit;
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
+
+
+
+        /* =========================================================
+           PAGE
+        ========================================================= */
+
+        .page {
+
+            width:
+                min(
+                    1180px,
+                    calc(100% - 48px)
+                );
+
+            height:
+                100vh;
+
+            margin:
+                0 auto;
+
+            padding:
+                20px 0;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
         }
-        .resume-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #f0f0f0;
-            color: black;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .project-header {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            margin-bottom:
+                13px;
         }
-        .resume-button:hover {
-            background-color: #005a8b;
+
+
+        .project-title {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                13px;
         }
+
+
+        .project-icon {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border-radius:
+                8px;
+
+            background:
+                var(--blue-light);
+
+            color:
+                var(--blue);
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+        }
+
+
+        h1 {
+
+            font-size:
+                22px;
+
+            font-weight:
+                500;
+
+            letter-spacing:
+                -0.4px;
+        }
+
+
+        .role {
+
+            margin-top:
+                3px;
+
+            color:
+                var(--secondary);
+
+            font-size:
+                12px;
+        }
+
+
+
+        /* =========================================================
+           HEADER BUTTONS
+        ========================================================= */
+
+        .header-actions {
+
+            display:
+                flex;
+
+            gap:
+                8px;
+        }
+
+
+        .button {
+
+            padding:
+                8px 13px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                4px;
+
+            background:
+                white;
+
+            color:
+                var(--blue);
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+            transition:
+                background 0.15s ease,
+                box-shadow 0.15s ease;
+        }
+
+
+        .button:hover {
+
+            background:
+                #f8fbff;
+
+            box-shadow:
+                0 1px 2px
+                rgba(60, 64, 67, 0.12);
+        }
+
+
+        .button-primary {
+
+            border-color:
+                var(--blue);
+
+            background:
+                var(--blue);
+
+            color:
+                white;
+        }
+
+
+        .button-primary:hover {
+
+            background:
+                var(--blue-dark);
+        }
+
+
+
+        /* =========================================================
+           STATUS BAR
+        ========================================================= */
+
+        .status-bar {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            padding:
+                8px 12px;
+
+            margin-bottom:
+                13px;
+
+            border:
+                1px solid #ceead6;
+
+            border-radius:
+                6px;
+
+            background:
+                var(--green-light);
+        }
+
+
+        .status-left {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                8px;
+
+            color:
+                #137333;
+
+            font-size:
+                11px;
+        }
+
+
+        .status-dot {
+
+            width:
+                7px;
+
+            height:
+                7px;
+
+            border-radius:
+                50%;
+
+            background:
+                #34a853;
+        }
+
+
+        .status-right {
+
+            color:
+                #137333;
+
+            font-size:
+                9px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0.4px;
+        }
+
+
+
+        /* =========================================================
+           DASHBOARD
+        ========================================================= */
+
+        .dashboard {
+
+            flex:
+                1;
+
+            min-height:
+                0;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(0, 1.05fr)
+                minmax(0, 0.95fr);
+
+            gap:
+                13px;
+        }
+
+
+        .column {
+
+            min-height:
+                0;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                13px;
+        }
+
+
+        /*
+           Important:
+           Do NOT stretch the right-side cards vertically.
+
+           This removes the unnecessary empty space that
+           appeared underneath Recent Activity.
+        */
+
+        .right-column {
+
+            justify-content:
+                flex-start;
+        }
+
+
+
+        /* =========================================================
+           COMMON CARD
+        ========================================================= */
+
+        .card {
+
+            overflow:
+                hidden;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                8px;
+
+            background:
+                white;
+        }
+
+
+        .card-header {
+
+            min-height:
+                40px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            padding:
+                0 14px;
+
+            border-bottom:
+                1px solid
+                var(--soft-border);
+        }
+
+
+        .card-title {
+
+            color:
+                #3c4043;
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+        }
+
+
+        .card-meta {
+
+            color:
+                var(--muted);
+
+            font-size:
+                9px;
+        }
+
+
+        .card-body {
+
+            padding:
+                13px 14px;
+        }
+
+
+
+        /* =========================================================
+           OVERVIEW
+        ========================================================= */
+
+        .overview-card {
+
+            flex:
+                0 0 auto;
+        }
+
+
+        .summary {
+
+            color:
+                var(--secondary);
+
+            font-size:
+                12px;
+
+            line-height:
+                1.55;
+        }
+
+
+        .summary strong {
+
+            color:
+                #3c4043;
+
+            font-weight:
+                600;
+        }
+
+
+
+        /* =========================================================
+           METRICS
+        ========================================================= */
+
+        .metrics {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            margin-top:
+                14px;
+
+            border-top:
+                1px solid
+                var(--soft-border);
+        }
+
+
+        .metric {
+
+            padding:
+                11px 10px 0;
+
+            border-right:
+                1px solid
+                var(--soft-border);
+        }
+
+
+        .metric:first-child {
+
+            padding-left:
+                0;
+        }
+
+
+        .metric:last-child {
+
+            border-right:
+                none;
+        }
+
+
+        .metric-name {
+
+            margin-bottom:
+                4px;
+
+            color:
+                var(--secondary);
+
+            font-size:
+                9px;
+        }
+
+
+        .metric-value {
+
+            font-size:
+                19px;
+
+            font-weight:
+                500;
+        }
+
+
+        .metric:nth-child(1)
+        .metric-value {
+
+            color:
+                var(--blue);
+        }
+
+
+        .metric:nth-child(2)
+        .metric-value {
+
+            color:
+                var(--green);
+        }
+
+
+        .metric:nth-child(3)
+        .metric-value {
+
+            color:
+                var(--yellow);
+        }
+
+
+        .metric-status {
+
+            margin-top:
+                2px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                8px;
+        }
+
+
+
+        /* =========================================================
+           TECHNOLOGY CARD
+        ========================================================= */
+
+        .technology-card {
+
+            flex:
+                1;
+        }
+
+
+        .tech-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                7px;
+        }
+
+
+        .tech {
+
+            min-height:
+                46px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+            padding:
+                7px 9px;
+
+            border:
+                1px solid
+                var(--soft-border);
+
+            border-radius:
+                5px;
+
+            background:
+                white;
+
+            transition:
+                border-color 0.15s ease,
+                background 0.15s ease,
+                box-shadow 0.15s ease;
+        }
+
+
+        .tech:hover {
+
+            border-color:
+                #aecbfa;
+
+            background:
+                #f8fbff;
+
+            box-shadow:
+                0 1px 2px
+                rgba(60, 64, 67, 0.14);
+        }
+
+
+        .tech-name {
+
+            color:
+                #3c4043;
+
+            font-size:
+                10px;
+
+            font-weight:
+                600;
+        }
+
+
+        .tech-type {
+
+            margin-top:
+                2px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                8px;
+        }
+
+
+
+        /* =========================================================
+           RECENT ACTIVITY / EXPERIENCE
+        ========================================================= */
+
+        .experience-card {
+
+            /*
+             Key change:
+             card ends immediately after its content.
+            */
+
+            flex:
+                0 0 auto;
+        }
+
+
+        /*
+           Slightly tighter padding specifically
+           for experience.
+        */
+
+        .experience-card
+        .card-body {
+
+            padding:
+                10px 14px;
+        }
+
+
+        .experience {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                40px
+                1fr
+                auto;
+
+            align-items:
+                center;
+
+            gap:
+                11px;
+
+            padding:
+                9px 0;
+
+            border-bottom:
+                1px solid
+                var(--soft-border);
+        }
+
+
+        .experience:first-child {
+
+            padding-top:
+                2px;
+        }
+
+
+        .experience:last-child {
+
+            padding-bottom:
+                2px;
+
+            border-bottom:
+                none;
+        }
+
+
+
+        /* =========================================================
+           COMPANY LOGOS
+        ========================================================= */
+
+        .company-logo-box {
+
+            width:
+                38px;
+
+            height:
+                38px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                5px;
+
+            border:
+                1px solid
+                var(--soft-border);
+
+            border-radius:
+                7px;
+
+            background:
+                white;
+        }
+
+
+        .company-logo {
+
+            display:
+                block;
+
+            max-width:
+                100%;
+
+            max-height:
+                100%;
+
+            object-fit:
+                contain;
+        }
+
+
+
+        /*
+           T-Mobile's standalone T mark.
+        */
+
+        .tmobile-logo {
+
+            width:
+                auto;
+
+            height:
+                25px;
+        }
+
+
+
+        /*
+           Texas A&M works naturally
+           as a square icon.
+        */
+
+        .tamu-logo {
+
+            width:
+                26px;
+
+            height:
+                26px;
+        }
+
+
+
+        /*
+           Tredence's returned logo/icon
+           may have a different aspect ratio.
+        */
+
+        .tredence-logo {
+
+            width:
+                28px;
+
+            height:
+                28px;
+
+            object-fit:
+                contain;
+        }
+
+
+
+        /*
+           NIT Durgapur emblem.
+        */
+
+        .nit-logo {
+
+            width:
+                27px;
+
+            height:
+                27px;
+
+            object-fit:
+                contain;
+        }
+
+
+
+        /* =========================================================
+           EXPERIENCE TEXT
+        ========================================================= */
+
+        .company {
+
+            color:
+                var(--blue);
+
+            font-size:
+                9px;
+
+            font-weight:
+                600;
+        }
+
+
+        .job-title {
+
+            margin-top:
+                1px;
+
+            color:
+                #3c4043;
+
+            font-size:
+                10.5px;
+
+            font-weight:
+                600;
+        }
+
+
+        .job-detail {
+
+            margin-top:
+                2px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                8.8px;
+
+            line-height:
+                1.35;
+        }
+
+
+        .date {
+
+            color:
+                var(--muted);
+
+            font-size:
+                8px;
+
+            white-space:
+                nowrap;
+        }
+
+
+
+        /* =========================================================
+           EDUCATION
+        ========================================================= */
+
+        .education-card {
+
+            flex:
+                0 0 auto;
+        }
+
+
+        .education-card
+        .card-body {
+
+            padding:
+                9px 14px;
+        }
+
+
+        .education-row {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                40px
+                1fr
+                auto;
+
+            align-items:
+                center;
+
+            gap:
+                11px;
+
+            padding:
+                7px 0;
+
+            border-bottom:
+                1px solid
+                var(--soft-border);
+        }
+
+
+        .education-row:first-child {
+
+            padding-top:
+                1px;
+        }
+
+
+        .education-row:last-child {
+
+            padding-bottom:
+                1px;
+
+            border-bottom:
+                none;
+        }
+
+
+        .education-logo-box {
+
+            width:
+                38px;
+
+            height:
+                38px;
+
+            flex-shrink:
+                0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                5px;
+
+            border:
+                1px solid
+                var(--soft-border);
+
+            border-radius:
+                7px;
+
+            background:
+                white;
+        }
+
+
+        .education-title {
+
+            color:
+                #3c4043;
+
+            font-size:
+                10px;
+
+            font-weight:
+                600;
+        }
+
+
+        .education-degree {
+
+            margin-top:
+                2px;
+
+            color:
+                var(--secondary);
+
+            font-size:
+                9px;
+        }
+
+
+        .education-detail {
+
+            margin-top:
+                2px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                8px;
+        }
+
+
+        .grade-chip {
+
+            padding:
+                5px 8px;
+
+            border-radius:
+                4px;
+
+            background:
+                var(--green-light);
+
+            color:
+                var(--green);
+
+            font-size:
+                8.5px;
+
+            font-weight:
+                600;
+
+            white-space:
+                nowrap;
+        }
+
+
+
+        /* =========================================================
+           SHORT DESKTOP
+        ========================================================= */
+
+        @media (max-height: 720px) {
+
+            .page {
+
+                padding:
+                    12px 0;
+            }
+
+
+            .project-header {
+
+                margin-bottom:
+                    8px;
+            }
+
+
+            .status-bar {
+
+                padding:
+                    6px 11px;
+
+                margin-bottom:
+                    8px;
+            }
+
+
+            .dashboard,
+            .column {
+
+                gap:
+                    8px;
+            }
+
+
+            .card-header {
+
+                min-height:
+                    33px;
+            }
+
+
+            .card-body {
+
+                padding:
+                    9px 11px;
+            }
+
+
+            .summary {
+
+                font-size:
+                    11px;
+
+                line-height:
+                    1.45;
+            }
+
+
+            .metrics {
+
+                margin-top:
+                    8px;
+            }
+
+
+            .metric {
+
+                padding-top:
+                    8px;
+            }
+
+
+            .tech {
+
+                min-height:
+                    36px;
+            }
+
+
+            .experience-card
+            .card-body {
+
+                padding:
+                    6px 11px;
+            }
+
+
+            .experience {
+
+                padding:
+                    5px 0;
+            }
+
+
+            .company-logo-box {
+
+                width:
+                    33px;
+
+                height:
+                    33px;
+            }
+
+
+            .experience {
+
+                grid-template-columns:
+                    35px
+                    1fr
+                    auto;
+            }
+
+
+            .education-card
+            .card-body {
+
+                padding:
+                    6px 11px;
+            }
+
+
+            .education-row {
+
+                padding:
+                    4px 0;
+
+                grid-template-columns:
+                    35px
+                    1fr
+                    auto;
+            }
+
+
+            .education-logo-box {
+
+                width:
+                    33px;
+
+                height:
+                    33px;
+            }
+
+        }
+
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media (max-width: 850px) {
+
+            body {
+
+                overflow-y:
+                    auto;
+            }
+
+
+            .page {
+
+                width:
+                    calc(100% - 28px);
+
+                height:
+                    auto;
+
+                min-height:
+                    100vh;
+            }
+
+
+            .dashboard {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .project-header {
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    18px;
+            }
+
+
+            .header-actions {
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    flex-end;
+            }
+
+        }
+
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 600px) {
+
+            .page {
+
+                padding-top:
+                    15px;
+            }
+
+
+            .project-header {
+
+                flex-direction:
+                    column;
+            }
+
+
+            .header-actions {
+
+                width:
+                    100%;
+
+                justify-content:
+                    flex-start;
+            }
+
+
+            .tech-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .status-right {
+
+                display:
+                    none;
+            }
+
+
+            .experience {
+
+                grid-template-columns:
+                    40px
+                    1fr;
+            }
+
+
+            .experience
+            .date {
+
+                display:
+                    none;
+            }
+
+
+            .education-row {
+
+                grid-template-columns:
+                    40px
+                    1fr;
+            }
+
+
+            .grade-chip {
+
+                grid-column:
+                    2;
+
+                width:
+                    fit-content;
+            }
+
+        }
+
     </style>
+
 </head>
+
+
+
 <body>
-    <div class="container">
-        <h1>Deepmoy Hazra</h1>
-        <p><strong>Data Scientist | Machine Learning Engineer</strong></p>
-        <p>
-            I am a Google Cloud-certified Professional Machine Learning Engineer with 3 years of experience in developing and deploying scalable ML and LLM models on cloud platforms, optimizing operational costs, and improving efficiency through CI/CD automation and MLOps pipelines. I specialize in Python, GCP, Kubernetes, TensorFlow, and building conversational AI solutions. My recent experience includes deploying machine learning models and working on complex MLOps pipelines to reduce prediction latency and improve model retraining processes.
-        </p>
-        <h3>Find me on:</h3>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/deepmoy-hazra-8642231b3/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/hazradeepmoy" target="_blank">GitHub</a></li>
-        </ul>
-        <a href="https://drive.google.com/drive/u/2/folders/11w4SEnfUlBD7P2cj-Jay6OnuyxX6slUL" class="resume-button" target="_blank">View My Resume</a>
+
+
+<div class="page">
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="project-header">
+
+
+        <div class="project-title">
+
+
+            <div class="project-icon">
+                DH
+            </div>
+
+
+            <div>
+
+                <h1>
+                    Deepmoy Hazra
+                </h1>
+
+
+                <div class="role">
+
+                    Full-Stack Agentic AI & ML Engineer
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="header-actions">
+
+
+            <a
+                href="https://www.linkedin.com/in/deepmoy-hazra-8642231b3/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                LinkedIn
+            </a>
+
+
+            <a
+                href="https://github.com/hazradeepmoy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+                GitHub
+            </a>
+
+
+            <a
+                href="https://drive.google.com/drive/u/2/folders/11w4SEnfUlBD7P2cj-Jay6OnuyxX6slUL"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-primary"
+            >
+                View Resume
+            </a>
+
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CURRENT STATUS
+    ====================================================== -->
+
+    <div class="status-bar">
+
+
+        <div class="status-left">
+
+            <span class="status-dot"></span>
+
+            MS Data Science · Texas A&M University
+
+        </div>
+
+
+        <div class="status-right">
+
+            ACTIVE
+
+        </div>
+
+
     </div>
+
+
+
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <main class="dashboard">
+
+
+
+        <!-- =================================================
+             LEFT
+        ================================================== -->
+
+        <div class="column">
+
+
+
+            <!-- OVERVIEW -->
+
+            <section class="card overview-card">
+
+
+                <div class="card-header">
+
+
+                    <div class="card-title">
+
+                        Overview
+
+                    </div>
+
+
+                    <div class="card-meta">
+
+                        Professional profile
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="card-body">
+
+
+                    <p class="summary">
+
+                        4+ years building
+
+                        <strong>
+
+                            end-to-end AI applications,
+                            ML systems and data pipelines
+
+                        </strong>.
+
+                        Current work focuses on
+
+                        <strong>
+
+                            Agentic AI, LLMs, RAG,
+                            tool calling and workflow automation
+
+                        </strong>,
+
+                        supported by production ML,
+                        cloud and MLOps experience.
+
+                    </p>
+
+
+
+                    <!-- METRICS -->
+
+                    <div class="metrics">
+
+
+                        <div class="metric">
+
+
+                            <div class="metric-name">
+
+                                Experience
+
+                            </div>
+
+
+                            <div class="metric-value">
+
+                                4+
+
+                            </div>
+
+
+                            <div class="metric-status">
+
+                                years
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="metric">
+
+
+                            <div class="metric-name">
+
+                                Cost savings
+
+                            </div>
+
+
+                            <div class="metric-value">
+
+                                $6M
+
+                            </div>
+
+
+                            <div class="metric-status">
+
+                                per year
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="metric">
+
+
+                            <div class="metric-name">
+
+                                Report reduction
+
+                            </div>
+
+
+                            <div class="metric-value">
+
+                                75%
+
+                            </div>
+
+
+                            <div class="metric-status">
+
+                                1,500 → 368
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- AI & CLOUD SERVICES -->
+
+            <section class="card technology-card">
+
+
+                <div class="card-header">
+
+
+                    <div class="card-title">
+
+                        AI & Cloud services
+
+                    </div>
+
+
+                    <div class="card-meta">
+
+                        Core technologies
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="card-body">
+
+
+                    <div class="tech-grid">
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                Agentic AI
+                            </div>
+
+                            <div class="tech-type">
+                                Intelligent workflows
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                LLMs
+                            </div>
+
+                            <div class="tech-type">
+                                Gemini · OpenAI
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                RAG
+                            </div>
+
+                            <div class="tech-type">
+                                Vector retrieval
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                Google ADK
+                            </div>
+
+                            <div class="tech-type">
+                                Agent framework
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                GCP
+                            </div>
+
+                            <div class="tech-type">
+                                Cloud platform
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                BigQuery
+                            </div>
+
+                            <div class="tech-type">
+                                Data warehouse
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                TensorFlow
+                            </div>
+
+                            <div class="tech-type">
+                                Machine learning
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                Kubernetes
+                            </div>
+
+                            <div class="tech-type">
+                                Orchestration
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="tech">
+
+                            <div class="tech-name">
+                                Docker
+                            </div>
+
+                            <div class="tech-type">
+                                Containers
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             RIGHT
+        ================================================== -->
+
+        <div class="column right-column">
+
+
+
+            <!-- RECENT ACTIVITY -->
+
+            <section class="card experience-card">
+
+
+                <div class="card-header">
+
+
+                    <div class="card-title">
+
+                        Recent activity
+
+                    </div>
+
+
+                    <div class="card-meta">
+
+                        Experience
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="card-body">
+
+
+
+                    <!-- T-MOBILE -->
+
+                    <div class="experience">
+
+
+                        <div class="company-logo-box">
+
+
+                            <img
+
+                                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/T_from_T_Mobile_logo.svg"
+
+                                alt="T-Mobile"
+
+                                class="
+                                    company-logo
+                                    tmobile-logo
+                                "
+
+                                onerror="
+                                    this.onerror=null;
+                                    this.src='https://www.google.com/s2/favicons?sz=128&domain_url=https://www.t-mobile.com';
+                                "
+
+                            >
+
+
+                        </div>
+
+
+
+                        <div>
+
+
+                            <div class="company">
+
+                                T-Mobile US
+
+                            </div>
+
+
+                            <div class="job-title">
+
+                                Agentic AI Product / Software Intern
+
+                            </div>
+
+
+                            <div class="job-detail">
+
+                                Automated rate-plan and hardware
+                                product-launch workflows using
+                                Agentic AI.
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="date">
+
+                            2026
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- TEXAS A&M -->
+
+                    <div class="experience">
+
+
+                        <div class="company-logo-box">
+
+
+                            <img
+
+                                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Texas_A%26M_University_logo.svg"
+
+                                alt="Texas A&M University"
+
+                                class="
+                                    company-logo
+                                    tamu-logo
+                                "
+
+                                onerror="
+                                    this.onerror=null;
+                                    this.src='https://www.google.com/s2/favicons?sz=128&domain_url=https://www.tamu.edu';
+                                "
+
+                            >
+
+
+                        </div>
+
+
+
+                        <div>
+
+
+                            <div class="company">
+
+                                Texas A&M · Mays Business School
+
+                            </div>
+
+
+                            <div class="job-title">
+
+                                Full-Stack AI/ML Engineer
+
+                            </div>
+
+
+                            <div class="job-detail">
+
+                                Built Agentic RAG using Gemini,
+                                Google ADK, web search, APIs,
+                                vector retrieval and tool calling.
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="date">
+
+                            2025–26
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- TREDENCE -->
+
+                    <div class="experience">
+
+
+                        <div class="company-logo-box">
+
+
+                            <img
+
+                                src="https://logo.clearbit.com/tredence.com"
+
+                                alt="Tredence Analytics"
+
+                                class="
+                                    company-logo
+                                    tredence-logo
+                                "
+
+                                onerror="
+                                    this.onerror=null;
+                                    this.src='https://www.google.com/s2/favicons?sz=128&domain_url=https://www.tredence.com';
+                                "
+
+                            >
+
+
+                        </div>
+
+
+
+                        <div>
+
+
+                            <div class="company">
+
+                                Tredence Analytics
+
+                            </div>
+
+
+                            <div class="job-title">
+
+                                ML & Data Analytics Consultant
+
+                            </div>
+
+
+                            <div class="job-detail">
+
+                                Developed ML, BigQuery and
+                                enterprise analytics solutions
+                                across large-scale data systems.
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="date">
+
+                            2022–25
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EDUCATION
+            ================================================== -->
+
+            <section class="card education-card">
+
+
+                <div class="card-header">
+
+
+                    <div class="card-title">
+
+                        Education
+
+                    </div>
+
+
+                    <div class="card-meta">
+
+                        Academic background
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="card-body">
+
+
+
+                    <!-- TEXAS A&M -->
+
+                    <div class="education-row">
+
+
+                        <div class="education-logo-box">
+
+
+                            <img
+
+                                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Texas_A%26M_University_logo.svg"
+
+                                alt="Texas A&M University"
+
+                                class="
+                                    company-logo
+                                    tamu-logo
+                                "
+
+                                onerror="
+                                    this.onerror=null;
+                                    this.src='https://www.google.com/s2/favicons?sz=128&domain_url=https://www.tamu.edu';
+                                "
+
+                            >
+
+
+                        </div>
+
+
+
+                        <div>
+
+
+                            <div class="education-title">
+
+                                Texas A&M University
+
+                            </div>
+
+
+                            <div class="education-degree">
+
+                                MS Data Science · 2025–2026
+
+                            </div>
+
+
+                            <div class="education-detail">
+
+                                RL · Bioinformatics · Agentic AI ·
+                                LLM Fine-tuning
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="grade-chip">
+
+                            GPA 3.857 / 4.0
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- NIT DURGAPUR -->
+
+                    <div class="education-row">
+
+
+                        <div class="education-logo-box">
+
+
+                            <img
+
+                                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/NIT_Durgapur_Logo.svg"
+
+                                alt="National Institute of Technology Durgapur"
+
+                                class="
+                                    company-logo
+                                    nit-logo
+                                "
+
+                                onerror="
+                                    this.onerror=null;
+                                    this.src='https://www.google.com/s2/favicons?sz=128&domain_url=https://nitdgp.ac.in';
+                                "
+
+                            >
+
+
+                        </div>
+
+
+
+                        <div>
+
+
+                            <div class="education-title">
+
+                                National Institute of Technology Durgapur
+
+                            </div>
+
+
+                            <div class="education-degree">
+
+                                B.Tech Electrical Engineering · 2018–2022
+
+                            </div>
+
+
+                            <div class="education-detail">
+
+                                National Institute of Technology · India
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="grade-chip">
+
+                            CGPA 8.46 / 10
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
 </body>
+
 </html>
-
-
-
-
